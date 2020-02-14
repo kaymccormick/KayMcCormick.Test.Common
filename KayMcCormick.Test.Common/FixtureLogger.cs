@@ -19,7 +19,7 @@ namespace KayMcCormick.Test.Common
         public static void LogFixtureLifecycleEvent ( Type fixtureType , Lifecycle lifecycle )
         {
             AppLoggingConfigHelper.EnsureLoggingConfigured();
-            new LogBuilder ( Logger ).Level(LogLevel.Trace).Message(( string ) "Fixture lifecycle event for {fixtureType}: {lifecycle}", ( object ) fixtureType, ( object ) lifecycle).Write();
+            new LogBuilder ( Logger ).Level(LogLevel.Trace).Message("Fixture lifecycle event for {fixtureType}: {lifecycle}", fixtureType, lifecycle).Write();
         }
 
         /// <summary>Logs the fixture finalized lifecycle event.</summary>
