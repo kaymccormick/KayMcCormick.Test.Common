@@ -21,8 +21,10 @@ namespace KayMcCormick.Test.Common
           , TestMethodLifecycle stage
         )
         {
-            IDictionary r = new Dictionary < string , object > ( ) ;
-            r[ "TestMethodName" ] = method.Name ;
+            IDictionary r = new Dictionary<string, object>
+            {
+                ["TestMethodName"] = method.Name
+            };
             if ( method.DeclaringType != null )
             {
                 r[ "TestClass" ] = method.DeclaringType.ToString ( ) ;
